@@ -33,30 +33,39 @@ the file in a browser and drop an `XDATCAR` onto it.
 - **Export** — PNG screenshot, CSV for every analysis panel, and video
   recording of the animation (MP4 where supported, WebM otherwise).
 
-## Installation
+## Use it online
 
-No installation required.
+Nothing to install and nothing to set up — the app runs entirely in your
+browser:
+
+### **https://ysknoda.github.io/xdatcar-visualizer/**
+
+Open that URL and drop an `XDATCAR` file onto it. The trajectory is parsed
+locally by your own browser and is never uploaded anywhere; there is no server
+side to this tool at all.
+
+**An internet connection is required.** React 18, Three.js r128, Recharts,
+Babel Standalone, and prop-types are fetched from a CDN rather than bundled,
+which is what keeps this a single readable file.
+
+### Running a pinned version
+
+The hosted page always tracks the latest commit. When you need a fixed version
+instead -- citing the exact build used for a figure, or archiving it alongside
+a dataset -- download a tagged release and open it locally:
 
 ```bash
-# Download the single file (pin the exact version you tested against)
 curl -LO https://github.com/ysknoda/xdatcar-visualizer/releases/download/v0.1.0b1/xdatcar_visualizer.html
 ```
 
-Then open `xdatcar_visualizer.html` in a modern browser. You can also clone
-the repository and open the file directly, or download it from the
-[Releases](https://github.com/ysknoda/xdatcar-visualizer/releases) page.
-
-Note that the URL above pins the tag explicitly. GitHub's
-`releases/latest/download/...` shortcut deliberately skips pre-releases, so it
-will not resolve until a stable (non-beta) release exists.
-
-**An internet connection is required on first load.** React 18, Three.js
-r128, Recharts, Babel Standalone, and prop-types are fetched from a CDN
-rather than bundled, which is what keeps this a single readable file.
+A CDN connection is still required when the downloaded file is opened. Note
+that this URL pins the tag explicitly: GitHub's `releases/latest/download/...`
+shortcut deliberately skips pre-releases, so it will not resolve until a
+stable (non-beta) release exists.
 
 ## Quick start
 
-1. Open `xdatcar_visualizer.html` in a browser.
+1. Open <https://ysknoda.github.io/xdatcar-visualizer/> in a browser.
 2. Drag an `XDATCAR` file onto the drop zone (or click to browse).
 3. Use the **Structure 3D** tab to animate the trajectory:
    drag to rotate, right-drag or Ctrl+drag to pan, scroll to zoom.
