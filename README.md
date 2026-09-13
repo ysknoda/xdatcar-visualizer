@@ -55,13 +55,16 @@ instead -- citing the exact build used for a figure, or archiving it alongside
 a dataset -- download a tagged release and open it locally:
 
 ```bash
-curl -LO https://github.com/ysknoda/xdatcar-visualizer/releases/download/v0.1.0b1/xdatcar_visualizer.html
+curl -LO https://github.com/ysknoda/xdatcar-visualizer/releases/download/v0.1.0b2/xdatcar_visualizer.html
 ```
 
-A CDN connection is still required when the downloaded file is opened. Note
-that this URL pins the tag explicitly: GitHub's `releases/latest/download/...`
-shortcut deliberately skips pre-releases, so it will not resolve until a
-stable (non-beta) release exists.
+A CDN connection is still required when the downloaded file is opened. The
+running version is shown in the header next to the title, so you can always
+tell which build produced a given figure.
+
+Note that this URL pins the tag explicitly: GitHub's
+`releases/latest/download/...` shortcut deliberately skips pre-releases, so it
+will not resolve until a stable (non-beta) release exists.
 
 ## Quick start
 
