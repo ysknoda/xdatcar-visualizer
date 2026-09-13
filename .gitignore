@@ -1,0 +1,14 @@
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# AI-assisted-development tooling (process artifacts, not the project)
+.claude/
+.code-check/
+.pip_preparation/
+
+# Local working files
+*.bak.html
+*.mp4
+*.png

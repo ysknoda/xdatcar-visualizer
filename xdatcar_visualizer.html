@@ -91,6 +91,12 @@ const {
   ResponsiveContainer,
 } = Recharts;
 
+// Shown in the header, next to the copyright notice. Keep this in step with
+// the git tag cut for the release (tag `v0.1.0b2` <-> APP_VERSION "0.1.0b2"),
+// so a user reporting a problem can name the exact build they were running.
+const APP_VERSION = "0.1.0b2";
+const APP_COPYRIGHT = "\u00A9 Yusuke Noda";
+
 // ═══════════════════════════════════════════════════════════════
 // XDATCAR Parser
 // ═══════════════════════════════════════════════════════════════
@@ -4600,7 +4606,13 @@ function App(){
         <div style={{width:36,height:36,borderRadius:8,background:"linear-gradient(135deg,#1d4ed8,#7c3aed)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:22,color:"#ffffff"}}>&#9883;</div>
         <div>
           <div style={{fontSize:15,fontWeight:700,color:th.text,letterSpacing:"-0.01em"}}>XDATCAR Visualizer</div>
-          <div style={{fontSize:11,color:th.muted}}>VASP crystal structure analysis</div>
+          <div style={{fontSize:11,color:th.muted,display:"flex",alignItems:"center",gap:6,flexWrap:"wrap"}}>
+            <span>VASP crystal structure analysis</span>
+            <span style={{opacity:0.45}}>|</span>
+            <span>v{APP_VERSION}</span>
+            <span style={{opacity:0.45}}>|</span>
+            <span style={{color:th.text,fontWeight:500}}>{APP_COPYRIGHT}</span>
+          </div>
         </div>
         {/* Background theme selector */}
         <div style={{display:"flex",alignItems:"center",gap:6,marginLeft:"auto"}}>
